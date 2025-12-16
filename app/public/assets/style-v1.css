@@ -1,0 +1,131 @@
+#my-gallery ul {
+    position: relative;
+}
+
+#my-gallery li {
+    position: absolute;
+    display: inline-block;
+}
+
+#my-gallery figure {
+    position: relative;
+}
+
+#my-gallery figcaption {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px 5px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, .60);
+    transition: all .3s ease;
+}
+
+#my-gallery figure:hover>figcaption {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gallery-item-holder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: gray;
+}
+
+.container-1 {
+    max-width: 75rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+#home-faq .faq-ans.show {
+    height: auto;
+    visibility: visible;
+}
+
+#home-faq .faq-ans {
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+#home-intro {
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/pampadum-shola-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+header {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+}
+
+#home-intro,
+#blog-area,
+.page-main-area,
+#search-area {
+    padding-top: 5.54rem;
+}
+
+.intro-profile-img {
+    padding: 1.5rem;
+    background-color: rgba(3, 128, 57, .25);
+    border-radius: 1rem;
+}
+
+.intro-profile-img img {
+    border-radius: 1rem;
+    box-shadow: 0 -2px 15px #0c0c05c9;
+}
+
+.gallery-loader,
+.gallery-loader-initial {
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    border-radius: .5rem;
+}
+
+@media (min-width: 1024px) {
+    .intro-profile-img {
+        transform: rotate(-5deg);
+    }
+}
+
+.intro-description {
+    margin-left: 1.5rem;
+}
+
+.content-hero {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    margin-bottom: 1rem;
+    padding: 5.54rem 0 2rem 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+    
+
+@media (min-width: 1200px) {
+    .container-1 {
+        max-width: 60rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #my-gallery figcaption {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

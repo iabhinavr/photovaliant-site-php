@@ -1,0 +1,46 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Master
+        uses: actions/checkout@master
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: |
+          cd app
+          composer install
+          npm install
+
+      - name: Copy project folder to vps
+        uses: appleboy/scp-action@master
+        with:
+          source: "."
+          target: "/home/abhinav/photovaliant-site-php"
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+
+      - name: setup environment files
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cp /home/abhinav/.env /home/abhinav/photovaliant-site-php/.env
+            cp /home/abhinav/.env /home/abhinav/photovaliant-site-php/app/.env

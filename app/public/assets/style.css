@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    body {
+        @apply font-inter;
+    }
+
+    .post-content h1 {
+        @apply text-4xl font-bold py-2 mb-2;
+    }
+
+    .post-content h2 {
+        @apply text-3xl font-bold py-2 pl-4 border-l-brand-yellow border-l-4 mb-4;
+    }
+
+    .post-content h3 {
+        @apply text-2xl pb-4 border-b-brand-yellow border-b-2 mb-4 inline-block clear-both;
+    }
+
+    .post-content h4 {
+        @apply text-xl pb-2 font-bold;
+    }
+
+    .post-content h5 {
+        @apply text-lg pb-2 font-bold;
+    }
+
+    .post-content h6 {
+        @apply text-lg pb-1;
+    }
+
+    .post-content pre {
+        @apply mb-4 font-ubuntumono p-2 bg-slate-700;
+    }
+
+    .post-content a {
+        @apply underline text-brand-green;
+    }
+
+    .post-content p {
+        @apply pb-6 text-lg text-gray-300;
+    }
+
+    .post-content p code {
+        @apply text-base;
+    }
+
+    .post-content ul {
+        @apply pl-4 list-disc text-lg text-gray-300;
+    }
+
+    .post-content ol {
+        @apply pl-4 list-decimal list-inside text-lg text-gray-300;
+    }
+
+    .post-content > ul,
+    .post-content > ol {
+        @apply pb-4;
+    }
+
+    .post-content li {
+        @apply pb-0;
+    }
+
+    .post-content figure {
+        @apply pb-4;
+    }
+
+    .post-content figure figcaption {
+        @apply text-center py-2;
+    }
+
+    .post-content p code,
+    .post-content li code,
+    .post-content h2 code,
+    .post-content h3 code {
+        @apply py-1 px-2 bg-slate-700 rounded;
+    }
+
+    .post-content .vid-wrapper-16-by-9 {
+        @apply aspect-video bg-contain relative mb-4;
+    }
+
+    .post-content .vid-overlay-wrapper {
+        @apply inset-0 bg-slate-900/50 absolute flex justify-center items-center ring ring-slate-600;
+    }
+
+    .post-content .vid-play-btn,
+    .yt-video .vid-play-btn {
+        @apply h-20 w-20 cursor-pointer bg-[url('images/play-circle.svg')] bg-contain bg-no-repeat transition-all hover:h-24 hover:w-24;
+    }
+
+    .post-content .vid-overlay-bottom {
+        @apply absolute right-0 bottom-0 left-0 flex justify-between items-center;
+    }
+
+    .post-content .vid-overlay-bottom a {
+        @apply text-slate-100 no-underline;
+    }
+
+    .post-content .vid-overlay-notify {
+        @apply text-[12px] pl-4;
+    }
+
+    .post-content .vid-overlay-ext {
+        @apply pt-3 pb-2 px-3 bg-red-600 block hover:bg-red-500 transition-all;
+    }
+
+    .post-content iframe {
+        @apply w-full h-full;
+    }
+
+    .post-content table {
+        @apply table-auto border-collapse border border-slate-700 bg-slate-800 mb-4 w-full;
+    }
+
+    .post-content table td,
+    .post-content table th {
+        @apply border border-slate-700 p-2 text-left;
+    }
+
+    .post-content .toc {
+        @apply bg-slate-800 rounded-md p-4 mb-4;
+    }
+
+    .post-content .toc .toc-title {
+        @apply text-xl py-3;
+    }
+
+    .post-content .toc ul {
+        @apply pb-0 list-none;
+    }
+
+    .post-content .toc li {
+        @apply pb-1;
+    }
+
+    .post-content .toc li a {
+        @apply no-underline hover:underline;
+    }
+
+    .post-content .bi-column-grid {
+        @apply grid grid-cols-2 gap-2;
+    }
+
+    .topic-list {
+        columns: 2;
+        margin-top: 1em;
+    }
+
+    .topic-list li a {
+        @apply text-brand-green;
+    }
+
+    .topic-list li a:hover {
+        @apply underline;
+    }
+
+    #site-nav ul {
+        @apply flex h-full items-center;
+    }
+
+    #site-nav ul li a {
+        @apply flex h-full px-2 items-center transition;
+    }
+
+    #site-nav ul li a:hover {
+        @apply text-brand-green;
+    }
+
+    .btn-primary-1 {
+        @apply px-4 py-2 bg-brand-red cursor-pointer hover:bg-brand-green text-lg uppercase rounded-tr-md rounded-br-md;
+        box-shadow: inset 0 1px 0 0 #fff3;
+    }
+
+    .form-2-col .main-input {
+        @apply px-4 py-2 text-lg bg-slate-600 ring-2 ring-inset ring-slate-500 outline-none focus:outline-none focus:ring-2 focus:ring-slate-400 rounded-tl-md rounded-bl-md;
+        width:calc(100% - 75px);
+    }
+
+    .form-2-col .checkbox-group {
+        @apply mr-4 flex;
+    }
+
+    .checkbox-group input {
+        @apply mr-2;
+    }
+
+    table {
+        @apply w-full table-auto border-collapse border border-slate-700 bg-slate-800 mb-4;
+    }
+    
+    table td,
+    table th {
+        @apply border border-slate-700 p-2 text-left;
+    }
+    
+    table th {
+        @apply bg-slate-600;
+    }
+    #home-faq h3 {
+        @apply bg-slate-300 text-slate-700 text-lg px-2 py-3 my-2 rounded-sm cursor-pointer;
+    }
+    #home-faq p {
+        @apply my-2 overflow-hidden;
+    }
+
+
+}
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn-2.coralnodes.com/coralnodes/fonts/inter/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'inter';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://cdn-2.coralnodes.com/coralnodes/fonts/inter/inter-v18-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn-2.coralnodes.com/coralnodes/fonts/inter/inter-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+/* ubuntu-mono-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'ubuntu-mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn-2.coralnodes.com/coralnodes/fonts/ubuntu-mono/ubuntu-mono-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* ubuntu-mono-italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'ubuntu-mono';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://cdn-2.coralnodes.com/coralnodes/fonts/ubuntu-mono/ubuntu-mono-v17-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* ubuntu-mono-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'ubuntu-mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn-2.coralnodes.com/coralnodes/fonts/ubuntu-mono/ubuntu-mono-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/.hljs{color:#c9d1d9;background:#0d1117}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#ff7b72}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#d2a8ff}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#79c0ff}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#a5d6ff}.hljs-built_in,.hljs-symbol{color:#ffa657}.hljs-code,.hljs-comment,.hljs-formula{color:#8b949e}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#7ee787}.hljs-subst{color:#c9d1d9}.hljs-section{color:#1f6feb;font-weight:700}.hljs-bullet{color:#f2cc60}.hljs-emphasis{color:#c9d1d9;font-style:italic}.hljs-strong{color:#c9d1d9;font-weight:700}.hljs-addition{color:#aff5b4;background-color:#033a16}.hljs-deletion{color:#ffdcd7;background-color:#67060c}
