@@ -42,5 +42,5 @@ jobs:
           key: ${{ secrets.VPS_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cp /home/abhinav/.env /home/abhinav/photovaliant-site-php/.env
-            cp /home/abhinav/.env /home/abhinav/photovaliant-site-php/app/.env
+            cp /home/abhinav/.pvenv /home/abhinav/photovaliant-site-php/.env
+            cp /home/abhinav/.pvenv /home/abhinav/photovaliant-site-php/app/.env
