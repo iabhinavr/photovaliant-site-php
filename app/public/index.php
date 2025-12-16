@@ -14,7 +14,7 @@ function log_exec_time() {
 use DI\ContainerBuilder;
 use Symfony\Component\Dotenv\Dotenv;
 
-define(constant_name: "CDN_URL", value: "https://cdn.coralnodes.com");
+define(constant_name: "CDN_URL", value: "https://cdn.photovaliant.com");
 
 require '../vendor/autoload.php';
 require '../lib/utils.php';
