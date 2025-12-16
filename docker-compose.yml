@@ -34,7 +34,7 @@ services:
             - ./my_custom.cnf:/etc/mysql/mariadb.conf.d/my_custom.cnf:ro
             - photovaliant_mysql_logs:/var/log/mysql
         ports:
-            - "33097:3306"
+            - "127.0.0.1:33097:3306"
         restart: always
 volumes:
     photovaliant_phpcms: {}
