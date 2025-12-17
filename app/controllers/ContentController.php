@@ -79,7 +79,7 @@ class ContentController extends MainController {
         }
 
         $props = [
-            'page_title' => 'CoralNodes'
+            'page_title' => 'PhotoValiant | Nature Photography by Abhinav Raveendran'
         ];
 
         $props['page_no'] = $args['page_no'];
@@ -151,7 +151,7 @@ class ContentController extends MainController {
         }
 
         $props['seo_data'] = [
-            'title' => 'Articles | CoralNodes',
+            'title' => 'Blog | PhotoValiant',
             'canonical' => "https://photovaliant.com/articles/"
         ];
 
@@ -252,7 +252,7 @@ class ContentController extends MainController {
                     "og:description" => $description,
                     "og:locale" => "en_IN",
                     "og:url" => "https://photovaliant.com/" . $article['slug'] . "/",
-                    "og:site_name" => "CoralNodes",
+                    "og:site_name" => "PhotoValiant",
                     "article:published_time" => iso_8601_date($row['published_date']),
                     "article:modified_time" => iso_8601_date($row['modified_date']),
                     "og:image" => "https://cdn-2.photovaliant.com/photovaliant/uploads/" . $row['featured_image'] . "/",
@@ -287,7 +287,7 @@ class ContentController extends MainController {
                 "inLanguage" => "en-IN",
                 "publisher" => [
                     "@type" => "Organization",
-                    "name" => "CoralNodes"
+                    "name" => "PhotoValiant"
                 ],
                 "image" => [
                     "@type" => "ImageObject",
@@ -497,7 +497,7 @@ class ContentController extends MainController {
                 "inLanguage" => "en-IN",
                 "publisher" => [
                     "@type" => "Organization",
-                    "name" => "CoralNodes"
+                    "name" => "PhotoValiant"
                 ],
                 "image" => [
                     "@type" => "ImageObject",

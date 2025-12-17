@@ -40,7 +40,7 @@ $containerBuilder->addDefinitions(__DIR__ . '/../definitions.php');
 $container = $containerBuilder->build();
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/extract-html/', 'ExtractionController@index');
+
     $r->addRoute('GET', '/', 'HomeController@index');
 
     $r->addRoute('GET', '/blog/', 'ContentController@article_index');

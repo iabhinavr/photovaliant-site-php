@@ -17,7 +17,7 @@ class ArchiveController extends MainController {
     public function taxonomy_content($vars) {
 
         $props = [
-            'page_title' => 'CoralNodes'
+            'page_title' => 'PhotoValiant | Nature Photography by Abhinav Raveendran'
         ];
 
         $args = [

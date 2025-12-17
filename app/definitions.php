@@ -34,8 +34,6 @@ include __DIR__ . '/lib/ParseYTEmbeds.php';
 
 include __DIR__ . '/middlewares/RedirectMiddleware.php';
 
-include __DIR__ . '/controllers/ExtractionController.php';
-
 return [
     'Database' => create(Database::class),
     'ContentModel' => create(ContentModel::class),
@@ -74,8 +72,5 @@ return [
             'strip_tags'    => false,
         ]);
     },
-
-    'ExtractionController' => create(ExtractionController::class)->constructor(get(entryName: 'ContentModel'), get('League\HTMLToMarkdown\HtmlConverter'), get('League\HTMLToMarkdown\HtmlConverter2'), get('Parsedown'))
-
     
 ];
