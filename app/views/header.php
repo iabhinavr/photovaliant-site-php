@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= _asset_url_('/assets/20251213.css') ?>">
-    <link rel="stylesheet" href="<?= _asset_url_('/assets/style-v1.css') ?>">
+    <link rel="stylesheet" href="<?= _asset_url_('/assets/style-v2.css') ?>">
     <?php if(!empty($props['load_justified_gallery'])) : ?>
         <link rel="stylesheet" href="<?= _asset_url_('/assets/justifiedGallery.min.css') ?>">
         <link rel="stylesheet" href="<?= _asset_url_('/assets/colorbox/colorbox.css') ?>">
