@@ -71,7 +71,8 @@ header {
 #home-intro,
 #blog-area,
 .page-main-area,
-#search-area {
+#search-area,
+.no-hero {
     padding-top: 5.54rem;
 }
 

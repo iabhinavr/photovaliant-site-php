@@ -1,7 +1,7 @@
 <section id="home-intro" class="single-post-article">
     <div class="post-content container flex flex-wrap items-center mx-auto lg:max-w-4xl px-2 tracking-tight mt-6">
         <div class="intro-profile-img basis-full mx-[15vw] sm:mx-4 sm:basis-1/3 lg:basis-1/4 grow-0 shrink">
-            <img src="/assets/images/intro-pic-abhinav-r.jpg" alt="Abhinav R - nature photographer">
+            <img src="<?= _asset_url_("/assets/images/intro-pic-abhinav-r.jpg") ?>" alt="Abhinav R - nature photographer">
         </div>
         <div class="intro-description py-4 flex-1">
             <?= $props['intro_content_html'] ?>
